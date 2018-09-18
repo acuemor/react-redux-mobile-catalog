@@ -36,6 +36,50 @@ const phone = (state = {}, action) => {
     camera: '12Mpx',
     screen: '5.99\'\'',
     battery: '3000mAh'
+  }, {
+    key: 3,
+    inStock: false,
+    text: 'Xiaomi Redmi Note',
+    description: 'El Redmi Note 5 toma fotos de alta calidad incluso en condiciones de poca luz. Los píxeles de gran tamaño de 1.4μm de la cámara principal crean fotos brillantes y claras. Todo esto se ve incluso mejorado por el segundo sensor, que ofrece una profundidad de campo no disponible en las cámaras de los smartphones convencionales.',
+    url: 'https://static.phonehouse.es/res/autoimg/41026_spc_450_450_qhigh_product.jpg',
+    color: 'black',
+    price: '189',
+    camera: '12Mpx',
+    screen: '5.99\'\'',
+    battery: '3000mAh'
+  }, {
+    key: 4,
+    inStock: true,
+    text: 'Xiaomi Redmi Note',
+    description: 'El Redmi Note 5 toma fotos de alta calidad incluso en condiciones de poca luz. Los píxeles de gran tamaño de 1.4μm de la cámara principal crean fotos brillantes y claras. Todo esto se ve incluso mejorado por el segundo sensor, que ofrece una profundidad de campo no disponible en las cámaras de los smartphones convencionales.',
+    url: 'https://static.phonehouse.es/res/autoimg/41026_spc_450_450_qhigh_product.jpg',
+    color: 'black',
+    price: '189',
+    camera: '12Mpx',
+    screen: '5.99\'\'',
+    battery: '3000mAh'
+  }, {
+    key: 5,
+    inStock: true,
+    text: 'Xiaomi Redmi Note',
+    description: 'El Redmi Note 5 toma fotos de alta calidad incluso en condiciones de poca luz. Los píxeles de gran tamaño de 1.4μm de la cámara principal crean fotos brillantes y claras. Todo esto se ve incluso mejorado por el segundo sensor, que ofrece una profundidad de campo no disponible en las cámaras de los smartphones convencionales.',
+    url: 'https://static.phonehouse.es/res/autoimg/41026_spc_450_450_qhigh_product.jpg',
+    color: 'black',
+    price: '189',
+    camera: '12Mpx',
+    screen: '5.99\'\'',
+    battery: '3000mAh'
+  }, {
+    key: 6,
+    inStock: true,
+    text: 'Xiaomi Redmi Note',
+    description: 'El Redmi Note 5 toma fotos de alta calidad incluso en condiciones de poca luz. Los píxeles de gran tamaño de 1.4μm de la cámara principal crean fotos brillantes y claras. Todo esto se ve incluso mejorado por el segundo sensor, que ofrece una profundidad de campo no disponible en las cámaras de los smartphones convencionales.',
+    url: 'https://static.phonehouse.es/res/autoimg/41026_spc_450_450_qhigh_product.jpg',
+    color: 'black',
+    price: '189',
+    camera: '12Mpx',
+    screen: '5.99\'\'',
+    battery: '3000mAh'
   }];
   
   const phones = (state = initialPhoneState, action) => {

@@ -24,6 +24,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onPhoneListClick: (id) => {
+            console.log('click on phone: ---->', id);
+            
             dispatch(togglePhoneStock(id))
         }
     }
