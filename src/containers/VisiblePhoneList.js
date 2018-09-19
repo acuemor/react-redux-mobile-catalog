@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { togglePhoneStock } from '../actions'
+import { loadData } from '../actions'
 import PhoneList from '../components/PhoneListComponent'
 
 const getVisiblePhoneList = (phones, filter) => {
@@ -17,7 +17,7 @@ const getVisiblePhoneList = (phones, filter) => {
 
 const mapStateToProps = (state) => {
     return {
-        phoneList: getVisiblePhoneList(state.phones, state.visibilityFilter)
+        phoneList: getVisiblePhoneList(state.phones.phoneList, state.visibilityFilter)
     }
 }
 
@@ -25,8 +25,10 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onPhoneListClick: (id) => {
             console.log('click on phone: ---->', id);
-            
-            dispatch(togglePhoneStock(id))
+            // dispatch()
+        },
+        getPhoneList: () => {
+            dispatch(loadData())
         }
     }
 }

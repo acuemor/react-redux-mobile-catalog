@@ -1,16 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, compose, applyMiddleware  } from 'redux';
 import PhonesApp from './reducers';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-let store = createStore(
+import thunk from 'redux-thunk';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__  || compose;
+const store = createStore(
   PhonesApp,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // In order to work with redux extension
-  );
+  composeEnhancers(applyMiddleware(thunk)),
+);
 
 render(
   <Provider store={store}>
