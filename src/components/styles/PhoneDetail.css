@@ -1,0 +1,36 @@
+.title {
+  color: #6e6e6e;
+  float: left;
+  margin: 20px 13px 10px 0px;
+  font-size: 27px;
+  line-height: 30px;
+  font-family: "Trade Gothic LT Std", Arial, Helvetica, sans-serif;
+}
+.line {
+  border-bottom: solid 1px #6e6e6e;
+  display: block;
+  margin-bottom: 20px;
+}
+.text {
+  color: #6e6e6e;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.desc {
+  color: #6e6e6e;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.features-title {
+  color: #6e6e6e;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.features {
+  color: #6e6e6e;
+  font-size: 16px;
+}
+p {
+  margin-left: 5px;
+  display: inline;
+}

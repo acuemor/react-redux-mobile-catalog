@@ -10,9 +10,9 @@ const mapStateToProps = state => ({
 
 const App = ({ phoneDetail }) => (
   <div>
-    <VisiblePhoneList />
-    {phoneDetail && <PhoneDetail phoneDetail={phoneDetail} />}
     <Footer />
+    {phoneDetail && <PhoneDetail phoneDetail={phoneDetail} />}
+    <VisiblePhoneList />
   </div>
 );
 
