@@ -3,8 +3,8 @@ import phones from './phones';
 import visibilityFilter from './visibilityFilter';
 
 const PhonesApp = combineReducers({
-    phones,
-    visibilityFilter
-})
+  phones,
+  visibilityFilter,
+});
 
 export default PhonesApp;

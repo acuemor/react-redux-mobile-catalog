@@ -1,5 +1,6 @@
 const initialPhoneState = () => ({
   phoneList: [],
+  phoneDetail: null,
 });
 
 const phones = (state = initialPhoneState(), action) => {
@@ -7,11 +8,17 @@ const phones = (state = initialPhoneState(), action) => {
     case 'GET_PHONE_LIST':
       return {
         ...state,
-        phoneList: action.phoneList, // corresponde con las propiedades que hay en el dispath del action
+        // corresponde con las propiedades que hay en el dispath del action
+        phoneList: action.phoneList,
+      };
+    case 'GET_PHONE_DETAIL':
+      return {
+        ...state,
+        phoneDetail: action.phoneDetail,
       };
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default phones;

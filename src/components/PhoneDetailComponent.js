@@ -1,24 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PhoneDetail = ({ onClick, inStock, text }) => (
-    <div
-      onClick={onClick}
-    >
-      {text},
-      {description},
-      {color},
-      {price},
+const PhoneDetail = ({ phoneDetail }) => (
+  <div>
+    <div>Detalles del producto</div>
+    <div>{phoneDetail.text}</div>
+    <div>{phoneDetail.description}</div>
+    <div>
+      Precio:
+      {phoneDetail.price}
+      {' '}
+euros
     </div>
-  )
+    <div>
+      Color:
+      {phoneDetail.color}
+    </div>
+    <div>
+      Pantalla:
+      {phoneDetail.screen}
+    </div>
+    <div>
+      Batería:
+      {phoneDetail.battery}
+    </div>
+    <div>
+      Cámara:
+      {phoneDetail.camera}
+    </div>
+  </div>
+);
 
 PhoneDetail.propTypes = {
-    phoneList: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        inStock: PropTypes.bool.isRequired,
-        text: PropTypes.string.isRequired
-    }).isRequired).isRequired,
-    onPhoneClick: PropTypes.func.isRequired
-}
+  phoneDetail: PropTypes.object,
+};
 
-export default PhoneDetail
+export default PhoneDetail;
