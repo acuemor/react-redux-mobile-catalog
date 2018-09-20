@@ -16,7 +16,7 @@ const getVisiblePhoneList = (phones, filter) => {
 };
 
 const mapStateToProps = state => ({
-  phoneList: getVisiblePhoneList(state.phones.phoneList, state.visibilityFilter),
+  phoneList: getVisiblePhoneList(state.phones.phoneList, state.visibilityFilter.filter),
 });
 
 const mapDispatchToProps = dispatch => ({

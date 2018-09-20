@@ -4,7 +4,7 @@ const initialPhoneState = () => ({
   loading: false,
 });
 
-const phones = (state = initialPhoneState(), action) => {
+export const phones = (state = initialPhoneState(), action) => {
   switch (action.type) {
     case 'GET_PHONE_LIST':
       return {
