@@ -1,6 +1,7 @@
 const initialPhoneState = () => ({
   phoneList: [],
   phoneDetail: null,
+  loading: false,
 });
 
 const phones = (state = initialPhoneState(), action) => {
@@ -20,6 +21,11 @@ const phones = (state = initialPhoneState(), action) => {
       return {
         ...state,
         phoneDetail: action.phoneDetail,
+      };
+    case 'SPINNER':
+      return {
+        ...state,
+        loading: action.loading,
       };
     default:
       return state;
