@@ -10,6 +10,11 @@ export const getPhoneDetail = phoneDetail => ({
   phoneDetail,
 });
 
+export const restorePhoneDetail = phoneDetail => ({
+  type: 'RESTORE_PHONE_DETAIL',
+  phoneDetail,
+});
+
 export const loadData = () => dispatch => axios
   .create({
     baseURL: 'http://localhost:3001',

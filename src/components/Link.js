@@ -1,15 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './styles/Link.css';
 
 const Link = ({ inStock, children, onClick }) => {
   if (inStock) {
-    return <span>{children}</span>;
+    return <span className="button">{children}</span>;
   }
 
   return (
     <button
+      className="button"
       href="#"
-      onClick={e => {
+      onClick={(e) => {
         e.preventDefault();
         onClick();
       }}
@@ -22,7 +24,7 @@ const Link = ({ inStock, children, onClick }) => {
 Link.propTypes = {
   inStock: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Link;
