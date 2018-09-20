@@ -16,6 +16,11 @@ const phones = (state = initialPhoneState(), action) => {
         ...state,
         phoneDetail: action.phoneDetail,
       };
+    case 'RESTORE_PHONE_DETAIL':
+      return {
+        ...state,
+        phoneDetail: action.phoneDetail,
+      };
     default:
       return state;
   }
