@@ -16,6 +16,12 @@ docker-compose -f docker-compose.yml up -d --build
 
 When the services are up and running, open [http://localhost:3000](http://localhost:3000) in your browser.
 
+To stop the services, run the following docker-compose command:
+
+```shell
+docker-compose stop
+```
+
 ## API Server
 
 The API server has been developed in NodeJS with [`Express`](http://expressjs.com/) infrastructure . It's serves on port [3001](http://localhost:3001/phones). To start the API, execute the following command from the root of the project:
