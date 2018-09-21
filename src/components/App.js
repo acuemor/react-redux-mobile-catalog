@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Footer from './Footer';
-import VisiblePhoneList from '../containers/VisiblePhoneList';
+import Header from './Header';
+import PhoneListContainer from '../containers/PhoneListContainer';
 import PhoneDetail from './PhoneDetailComponent';
 import SpinnerComponent from './SpinnerComponent';
 
@@ -13,9 +13,9 @@ const mapStateToProps = state => ({
 
 const App = ({ phoneDetail, loading }) => (
   <div>
-    {!loading && <Footer />}
+    {!loading && <Header />}
     {phoneDetail && <PhoneDetail phoneDetail={phoneDetail} />}
-    <VisiblePhoneList />
+    <PhoneListContainer />
     {loading && <SpinnerComponent />}
   </div>
 );
