@@ -17,8 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "clean": "rm -rf node_modules; npm install; npm start",
-    "start-api": "node api/app.js"
+    "clean": "rm -rf node_modules; npm install; npm start"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
