@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { loadData, getPhoneDetail } from '../actions';
 import PhoneList from '../components/PhoneListComponent';
 
-const getVisiblePhoneList = (phones, filter) => {
+const getPhoneListContainer = (phones, filter) => {
   switch (filter) {
     case 'SHOW_ALL':
       return phones;
@@ -16,7 +16,7 @@ const getVisiblePhoneList = (phones, filter) => {
 };
 
 const mapStateToProps = state => ({
-  phoneList: getVisiblePhoneList(state.phones.phoneList, state.visibilityFilter.filter),
+  phoneList: getPhoneListContainer(state.phones.phoneList, state.visibilityFilter.filter),
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -28,9 +28,9 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-const VisiblePhoneList = connect(
+const PhoneListContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(PhoneList);
 
-export default VisiblePhoneList;
+export default PhoneListContainer;

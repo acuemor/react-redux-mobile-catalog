@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## API Server
 
-The API server has been developed in NodeJS with [`Express` infrastructure](http://expressjs.com/) . It's serves on port 3001. To start the API, execute the following command from the root of the project:
+The API server has been developed in NodeJS with [`Express`](http://expressjs.com/) infrastructure . It's serves on port [3001](http://localhost:3001/phones). To start the API, execute the following command from the root of the project:
 
 npm run start-api
 
@@ -16,7 +16,7 @@ _Note: A 5 second timeout has been added to test spinner functionality_
 
 ## Web Server
 
-The front part has been developed in React with [`Redux`](https://redux.js.org/) for the management of the states of the application. It is in port 3000. To raise the front, execute the following command from the root of the project:
+The front part has been developed in React with [`Redux`](https://redux.js.org/) for the management of the states of the application. It is in port [3000](http://localhost:3000). To raise the front, execute the following command from the root of the project:
 
 npm start
 
