@@ -1,0 +1,16 @@
+version: "3"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    ports:
+      - "3001:3001"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
