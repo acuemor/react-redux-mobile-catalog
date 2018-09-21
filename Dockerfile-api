@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 # Bundle app source
 COPY api/ .
 
-RUN rm -rf node_modules\ 
+RUN rm -rf node_modules && \ 
 npm install
 
 EXPOSE 3001
