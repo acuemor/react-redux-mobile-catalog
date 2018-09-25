@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import './styles/PhoneDetail.css';
 
 function PhoneDetail({ phoneDetail }) {
-  if (!phoneDetail.key) {
-    return null;
-  }
-
-  return (
+  return !phoneDetail.key ? null : (
     <div>
       <div className="title">Detalles del producto</div>
       <div className="line" />

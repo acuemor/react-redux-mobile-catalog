@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Phone from './Phone';
+import './styles/PhoneList.css';
 
 class PhoneList extends Component {
   componentDidMount() {
@@ -11,14 +12,30 @@ class PhoneList extends Component {
 
   render() {
     const { onPhoneListClick, phoneList } = this.props;
-
+    const firstThird = Math.ceil(phoneList.length / 3);
+    const secondThird = Math.ceil(phoneList.length - phoneList.length / 3);
+    const columnA = phoneList.slice(0, firstThird);
+    const columnB = phoneList.slice(firstThird, secondThird);
+    const columnC = phoneList.slice(secondThird);
     return (
       <div>
-        <ul>
-          {phoneList.map(phone => (
-            <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
-          ))}
-        </ul>
+        <div className="columns is-mobile is-multiline is-centered">
+          <div className="column is-narrow">
+            {columnA.map(phone => (
+              <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
+            ))}
+          </div>
+          <div className="column is-narrow">
+            {columnB.map(phone => (
+              <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
+            ))}
+          </div>
+          <div className="column is-narrow">
+            {columnC.map(phone => (
+              <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
+            ))}
+          </div>
+        </div>
       </div>
     );
   }

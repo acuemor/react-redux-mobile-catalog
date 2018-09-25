@@ -8,16 +8,22 @@ const Link = ({ inStock, children, onClick }) => {
   }
 
   return (
-    <button
-      className="button"
-      href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        onClick();
-      }}
-    >
-      {children}
-    </button>
+    <div>
+      <div className="columns">
+        <div className="column">
+          <button
+            className="button"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onClick();
+            }}
+          >
+            {children}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
