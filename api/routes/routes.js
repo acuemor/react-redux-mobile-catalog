@@ -244,7 +244,7 @@ const appRouter = app => {
     ];
     setTimeout(() => {
       res.status(200).send(data);
-    }, 0);
+    }, 5000);
   });
 };
 
