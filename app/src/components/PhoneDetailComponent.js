@@ -3,42 +3,30 @@ import PropTypes from 'prop-types';
 import './styles/PhoneDetail.css';
 
 function PhoneDetail({ phoneDetail }) {
-  if (!phoneDetail.key) {
-    return null;
-  }
-
-  return (
-    <div>
-      <div className="title">Detalles del producto</div>
-      <div className="line" />
-      <div className="text">{phoneDetail.text}</div>
+  return !phoneDetail.key ? null : (
+    <div className="content">
+      <div className="title">{phoneDetail.text}</div>
       <div className="desc">{phoneDetail.description}</div>
-      <div>
-        {' '}
-        <div className="features-title">Características</div>
-        <div className="features">
-          <p>Precio:</p>
-          <p>{phoneDetail.price}</p>
-          {' '}
-          <p>euros</p>
-        </div>
-        <div className="features">
-          <p>Color:</p>
-          <p>{phoneDetail.color}</p>
-        </div>
-        <div className="features">
-          <p>Pantalla</p>
-          <p>{phoneDetail.screen}</p>
-        </div>
-        <div className="features">
-          <p>Batería:</p>
-          <p>{phoneDetail.battery}</p>
-        </div>
-        <div className="features">
-          <p>Cámara:</p>
-          <p>{phoneDetail.camera}</p>
-        </div>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th className="has-text-centered">Precio (€)</th>
+            <th className="has-text-centered">Color</th>
+            <th className="has-text-centered">Pantalla</th>
+            <th className="has-text-centered">Batería</th>
+            <th className="has-text-centered">Cámara</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="has-text-centered">{phoneDetail.price}</td>
+            <td className="has-text-centered">{phoneDetail.color}</td>
+            <td className="has-text-centered">{phoneDetail.screen}</td>
+            <td className="has-text-centered">{phoneDetail.battery}</td>
+            <td className="has-text-centered">{phoneDetail.camera}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

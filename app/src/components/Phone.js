@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './styles/Phone.css';
 
 const Phone = ({ onClick, inStock, url }) => (
-  <li className={inStock ? 'phone-in-stock' : 'phone-sold-out'} onClick={onClick}>
+  <div className={inStock ? 'phone-in-stock' : 'phone-sold-out'} onClick={onClick}>
     <img src={url} alt="Demo app" />
-  </li>
+  </div>
 );
 
 Phone.propTypes = {

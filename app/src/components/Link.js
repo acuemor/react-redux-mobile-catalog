@@ -9,8 +9,9 @@ const Link = ({ inStock, children, onClick }) => {
 
   return (
     <button
-      className="button"
+      className="button is-primary is-outlined"
       href="#"
+      type="button"
       onClick={(e) => {
         e.preventDefault();
         onClick();
