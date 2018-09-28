@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./styles/Phone.css";
 
-const Phone = ({ onClick, url, text, price }) => (
+const Phone = ({
+  onClick, url, text, price,
+}) => (
   <div>
     <div className="card" onClick={onClick}>
       <header className="card-header">
