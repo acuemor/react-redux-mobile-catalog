@@ -30,12 +30,9 @@ describe('PhonesReducer', () => {
     },
   ];
 
-  const mockedPhoneDetail = mockedPhoneList[0];
-
   it('should return the initial state', () => {
     expect(reducer.phones(undefined, {})).toEqual({
       phoneList: [],
-      phoneDetail: null,
       loading: false,
     });
   });
@@ -56,17 +53,14 @@ describe('PhonesReducer', () => {
       reducer.phones(
         {
           phoneList: [],
-          phoneDetail: null,
           loading: false,
         },
         {
           type: 'GET_PHONE_DETAIL',
-          phoneDetail: mockedPhoneDetail,
         },
       ),
     ).toEqual({
       phoneList: [],
-      phoneDetail: mockedPhoneDetail,
       loading: false,
     });
   });
@@ -76,17 +70,14 @@ describe('PhonesReducer', () => {
       reducer.phones(
         {
           phoneList: [],
-          phoneDetail: mockedPhoneDetail,
           loading: false,
         },
         {
           type: 'RESTORE_PHONE_DETAIL',
-          phoneDetail: {},
         },
       ),
     ).toEqual({
       phoneList: [],
-      phoneDetail: {},
       loading: false,
     });
   });
@@ -96,7 +87,6 @@ describe('PhonesReducer', () => {
       reducer.phones(
         {
           phoneList: [],
-          phoneDetail: null,
           loading: false,
         },
         {
@@ -106,7 +96,6 @@ describe('PhonesReducer', () => {
       ),
     ).toEqual({
       phoneList: [],
-      phoneDetail: null,
       loading: true,
     });
   });

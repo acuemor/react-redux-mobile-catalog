@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Phone from './Phone';
-import './styles/PhoneList.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Phone from "./Phone";
+import "./styles/PhoneList.css";
 
 class PhoneList extends Component {
   componentDidMount() {
@@ -22,17 +22,30 @@ class PhoneList extends Component {
         <div className="columns is-mobile is-multiline is-centered">
           <div className="column is-narrow">
             {columnA.map(phone => (
-              <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
+              <Phone
+                key={phone.key}
+                {...phone}
+                price={phone.price}
+                onClick={() => onPhoneListClick(phone)}
+              />
             ))}
           </div>
           <div className="column is-narrow">
             {columnB.map(phone => (
-              <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
+              <Phone
+                key={phone.key}
+                {...phone}
+                onClick={() => onPhoneListClick(phone)}
+              />
             ))}
           </div>
           <div className="column is-narrow">
             {columnC.map(phone => (
-              <Phone key={phone.key} {...phone} onClick={() => onPhoneListClick(phone)} />
+              <Phone
+                key={phone.key}
+                {...phone}
+                onClick={() => onPhoneListClick(phone)}
+              />
             ))}
           </div>
         </div>
@@ -46,14 +59,14 @@ PhoneList.propTypes = {
   phoneList: PropTypes.array,
   getPhoneList: PropTypes.func,
   inStock: PropTypes.bool,
-  text: PropTypes.string,
+  text: PropTypes.string
 };
 PhoneList.defaultProps = {
   onPhoneListClick: undefined,
   phoneList: [],
   getPhoneList: undefined,
   inStock: true,
-  text: '',
+  text: ""
 };
 
 export default PhoneList;

@@ -5,16 +5,6 @@ export const setVisibilityFilter = filter => ({
   filter,
 });
 
-export const getPhoneDetail = phoneDetail => ({
-  type: 'GET_PHONE_DETAIL',
-  phoneDetail,
-});
-
-export const restorePhoneDetail = phoneDetail => ({
-  type: 'RESTORE_PHONE_DETAIL',
-  phoneDetail,
-});
-
 export const loadData = () => (dispatch) => {
   dispatch({ type: 'SPINNER', loading: true });
   axios
@@ -40,3 +30,13 @@ export const loadData = () => (dispatch) => {
       // always executed
     });
 };
+
+export const openModal = (content, title) => ({
+  type: 'OPEN_MODAL',
+  content,
+  title,
+});
+
+export const closeModal = () => ({
+  type: 'CLOSE_MODAL',
+});

@@ -1,16 +1,14 @@
 import { connect } from 'react-redux';
-import { setVisibilityFilter, restorePhoneDetail } from '../actions';
+import { setVisibilityFilter } from '../actions';
 import Link from '../components/Link';
 
 const mapStateToProps = (state, ownProps) => ({
   inStock: ownProps.filter === state.visibilityFilter,
-  phoneDetail: null,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: () => {
     dispatch(setVisibilityFilter(ownProps.filter));
-    dispatch(restorePhoneDetail({}));
   },
 });
 

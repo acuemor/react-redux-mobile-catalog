@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { loadData, getPhoneDetail } from '../actions';
+import { loadData, openModal } from '../actions';
 import PhoneList from '../components/PhoneListComponent';
 
 const getPhoneListContainer = (phones, filter) => {
@@ -21,7 +21,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onPhoneListClick: (phone) => {
-    dispatch(getPhoneDetail(phone));
+    dispatch(openModal(phone, phone.text));
   },
   getPhoneList: () => {
     dispatch(loadData());
