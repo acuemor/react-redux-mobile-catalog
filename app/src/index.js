@@ -8,6 +8,8 @@ import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import 'bulma/css/bulma.css';
+import 'bulma-extensions/dist/css/bulma-extensions.min.css';
+import 'bulma-extensions/dist/js/bulma-extensions';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(PhonesApp, composeEnhancers(applyMiddleware(thunk)));
