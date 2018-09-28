@@ -3,7 +3,7 @@ import "./styles/Spinner.css";
 
 const SpinnerComponent = () => (
   <div className="pageloader is-active">
-    <span className="title">Pageloader</span>
+    <span className="title">Loading Phone Catalog</span>
   </div>
 );
 

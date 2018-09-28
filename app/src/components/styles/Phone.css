@@ -1,40 +1,4 @@
-/* .phone-in-stock{
-    text-decoration: none;
-} 
-
-.phone-sold-out {
-    text-decoration: line-through;
+.custom-centered {
+  justify-content: center;
+  align-items: center;
 }
-* {
-    margin: 0;
-    padding: 0;
-  }
-   
- 
-  div {
-    width: 900px;
-    margin: 0 auto;
-    overflow: auto;
-  }
-   
-  ul {
-    list-style-type: none;
-  }
-   
-  li img {
-    float: left;
-    margin: 10px;
-    border: 5px solid #fff;
-   
-    -webkit-transition: box-shadow 0.5s ease;
-    -moz-transition: box-shadow 0.5s ease;
-    -o-transition: box-shadow 0.5s ease;
-    -ms-transition: box-shadow 0.5s ease;
-    transition: box-shadow 0.5s ease;
-    cursor: pointer;
-  }
-
-  li img:hover {
-    -webkit-box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
-    box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
-  } */
